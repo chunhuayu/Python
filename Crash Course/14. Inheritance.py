@@ -64,7 +64,8 @@ John Doe
 
 Mike Olsen
 
-# Now we have successfully added the __init__() function, and kept the inheritance of the parent class, and we are ready to add functionality in the __init__() function.
+# Now we have successfully added the __init__() function, and kept the inheritance of the parent class, 
+# and we are ready to add functionality in the __init__() function.
 
 # Add Properties
 
@@ -76,7 +77,8 @@ Mike Olsen
         self.graduationyear = 2019
 2019
 
-# In the example below, the year 2019 should be a variable, and passed into the Student class when creating student objects. To do so, add another parameter in the __init__() function:
+# In the example below, the year 2019 should be a variable, and passed into the Student class when creating student objects. 
+# To do so, add another parameter in the __init__() function:
 # Add a year parameter, and pass the correct year when creating objects:
 
 >>> class Student(Person):
@@ -99,4 +101,5 @@ Mike Olsen
         print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
 Welcome Mike Olsen to the class of 2019
 
-# If you add a method in the child class with the same name as a function in the parent class, the inheritance of the parent method will be overridden.
+# If you add a method in the child class with the same name as a function in the parent class, the inheritance of the 
+# parent method will be overridden.
