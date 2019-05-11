@@ -15,6 +15,29 @@
 >>> print(type(z))
 <class 'complex'>
 
+>>> a = 35e3
+>>> b = 12E4
+>>> c = -87.7e100
+
+>>> print(type(a))
+<class 'float'>
+>>> print(type(b))
+<class 'float'>
+>>> print(type(c))
+<class 'float'>
+
+>>> e = 3+5j
+>>> f = 5j
+>>> k = -5j
+
+>>> print(type(e))
+<class 'complex'>
+>>> print(type(f))
+<class 'complex'>
+>>> print(type(k))
+<class 'complex'>
+
+
 >>> 1 + 1
 2
 
