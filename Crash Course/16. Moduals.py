@@ -1,105 +1,93 @@
-What is a Module?
-Consider a module to be the same as a code library.
+# What is a Module?
+# Consider a module to be the same as a code library.
 
-A file containing a set of functions you want to include in your application.
+# A file containing a set of functions you want to include in your application.
 
-Create a Module
-To create a module just save the code you want in a file with the file extension .py:
+# Create a Module
+# To create a module just save the code you want in a file with the file extension .py:
 
-Example
-Save this code in a file named mymodule.py
+# Save this code in a file named mymodule.py
 
-def greeting(name):
-  print("Hello, " + name)
-Use a Module
-Now we can use the module we just created, by using the import statement:
+>>> def greeting(name):
+      print("Hello, " + name)
 
-Example
-Import the module named mymodule, and call the greeting function:
+    
+# Use a Module : Now we can use the module we just created, by using the import statement:
 
-import mymodule
+# Import the module named mymodule, and call the greeting function:
+>>> import mymodule
 
-mymodule.greeting("Jonathan")
-Run example »
-Note: When using a function from a module, use the syntax: module_name.function_name.
+>>> mymodule.greeting("Jonathan")
 
-Variables in Module
-The module can contain functions, as already described, but also variables of all types (arrays, dictionaries, objects etc):
+# Note: When using a function from a module, use the syntax: module_name.function_name.
 
-Example
-Save this code in the file mymodule.py
+# Variables in Module
+# The module can contain functions, as already described, but also variables of all types (arrays, dictionaries, objects etc):
 
-person1 = {
-  "name": "John",
-  "age": 36,
-  "country": "Norway"
-}
-Example
-Import the module named mymodule, and access the person1 dictionary:
+# Save this code in the file mymodule.py
 
-import mymodule
+>>> person1 = {
+      "name": "John",
+      "age": 36,
+      "country": "Norway"
+    }
+# Import the module named mymodule, and access the person1 dictionary:
 
-a = mymodule.person1["age"]
-print(a)
-Run example »
+>>> import mymodule
 
-Naming a Module
-You can name the module file whatever you like, but it must have the file extension .py
+>>> a = mymodule.person1["age"]
+>>> print(a)
 
-Re-naming a Module
-You can create an alias when you import a module, by using the as keyword:
 
-Example
-Create an alias for mymodule called mx:
+# Naming a Module
+# You can name the module file whatever you like, but it must have the file extension .py
+# Re-naming a Module
+# You can create an alias when you import a module, by using the as keyword:
 
-import mymodule as mx
+# Create an alias for mymodule called mx:
 
-a = mx.person1["age"]
-print(a)
-Run example »
-Built-in Modules
-There are several built-in modules in Python, which you can import whenever you like.
+>>> import mymodule as mx
+>>> a = mx.person1["age"]
+>>> print(a)
 
-Example
-Import and use the platform module:
 
-import platform
+# Built-in Modules
+# There are several built-in modules in Python, which you can import whenever you like.
+# Import and use the platform module:
 
-x = platform.system()
-print(x)
-Run example »
-Using the dir() Function
-There is a built-in function to list all the function names (or variable names) in a module. The dir() function:
+>>> import platform
+>>> x = platform.system()
+>>> print(x)
 
-Example
-List all the defined names belonging to the platform module:
+# Using the dir() Function
+# There is a built-in function to list all the function names (or variable names) in a module. The dir() function:
 
-import platform
 
-x = dir(platform)
-print(x)
-Run example »
-Note: The dir() function can be used on all modules, also the ones you create yourself.
+# List all the defined names belonging to the platform module:
 
-Import From Module
-You can choose to import only parts from a module, by using the from keyword.
+>>> import platform
 
-Example
-The module named mymodule has one function and one dictionary:
+>>> x = dir(platform)
+>>> print(x)
 
-def greeting(name):
-  print("Hello, " + name)
+# Note: The dir() function can be used on all modules, also the ones you create yourself.
 
-person1 = {
-  "name": "John",
-  "age": 36,
-  "country": "Norway"
-}
-Example
-Import only the person1 dictionary from the module:
+# Import From Module
+# You can choose to import only parts from a module, by using the from keyword.
 
-from mymodule import person1
+# The module named mymodule has one function and one dictionary:
 
-print (person1["age"])
-Run example »
-Note: When importing using the from keyword, do not use the module name when referring to elements in the module. Example: person1["age"], not mymodule.person1["age"]
+>>> def greeting(name):
+      print("Hello, " + name)
+    person1 = {
+      "name": "John",
+      "age": 36,
+      "country": "Norway"
+    }
+
+# Import only the person1 dictionary from the module:
+
+>>> from mymodule import person1
+>>> print (person1["age"])
+
+# Note: When importing using the from keyword, do not use the module name when referring to elements in the module. Example: person1["age"], not mymodule.person1["age"]
