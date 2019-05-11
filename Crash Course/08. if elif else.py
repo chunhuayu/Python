@@ -20,7 +20,7 @@
       print("b is greater than a")
 # In this example we use two variables, a and b, which are used as part of the if statement to test whether b is greater than a. 
 # As a is 33, and b is 200, we know that 200 is greater than 33, and so we print to screen that "b is greater than a".
-
+b is greater than a
 
 # Indentation : Python relies on indentation, using whitespace, to define scope in the code. Other programming languages often use curly-brackets for this purpose.
 # If statement, without indentation (will raise an error):
@@ -28,6 +28,11 @@
 >>> b = 200
 >>> if b > a:
 >>> print("b is greater than a") # you will get an error
+
+  File "demo_if_error.py", line 4
+    print("b is greater than a")
+        ^
+IndentationError: expected an indented block
 
 
 # Elif : The elif keyword is pythons way of saying "if the previous conditions were not true, then try this condition".
@@ -38,6 +43,7 @@
 >>> elif a == b:
       print("a and b are equal")
 # In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that "a and b are equal".
+a and b are equal
 
 
 # Else : The else keyword catches anything which isn't caught by the preceding conditions.
@@ -50,6 +56,7 @@
     else:
       print("a is greater than b")
 # In this example a is greater to b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".
+a is greater than b
 
 
 # You can also have an else without the elif:
@@ -59,23 +66,26 @@
       print("b is greater than a")
     else:
       print("b is not greater than a")
+b is not greater than a
 
 
 # Short Hand If : If you have only one statement to execute, you can put it on the same line as the if statement.
 # One line if statement:
 >>> if a > b: print("a is greater than b")
-
+a is greater than b
+      
         
-# Short Hand If ... Else
+### Short Hand If ... Else
 # If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:
 # One line if else statement:
 >>> print("A") if a > b else print("B")
+B
 
 
 # You can also have multiple else statements on the same line:
 # One line if else statement, with 3 conditions:
-
 >>> print("A") if a > b else print("=") if a == b else print("B")
+
 
 # And : The and keyword is a logical operator, and is used to combine conditional statements:
 # Test if a is greater than b, AND if c is greater than a:
