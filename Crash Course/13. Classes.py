@@ -8,8 +8,8 @@
 # To create a class, use the keyword class:
 # Create a class named MyClass, with a property named x:
 
-# class MyClass:
->>> x = 5
+>>> class MyClass:
+      x = 5
 
 
 # Create Object
@@ -29,8 +29,8 @@
 # Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
 
 # Create a class named Person, use the __init__() function to assign values for name and age:
-# class Person:
->>> def __init__(self, name, age):
+>>> class Person:
+      def __init__(self, name, age):
         self.name = name
         self.age = age
 
@@ -48,12 +48,12 @@
 # Let us create a method in the Person class:
 # Insert a function that prints a greeting, and execute it on the p1 object:
 
-# class Person:
->>> def __init__(self, name, age):
+>>> class Person:
+      def __init__(self, name, age):
         self.name = name
         self.age = age
 
->>> def myfunc(self):
+      def myfunc(self):
         print("Hello my name is " + self.name)
 
 >>> p1 = Person("John", 36)
@@ -69,13 +69,13 @@
 
 # Use the words mysillyobject and abc instead of self:
 
-# class Person:
->>> def __init__(mysillyobject, name, age):
-       mysillyobject.name = name
-       mysillyobject.age = age
+>>> class Person:
+      def __init__(mysillyobject, name, age):
+        mysillyobject.name = name
+        mysillyobject.age = age
 
->>> def myfunc(abc):
-       print("Hello my name is " + abc.name)
+      def myfunc(abc):
+        print("Hello my name is " + abc.name)
 
 >>> p1 = Person("John", 36)
 >>> p1.myfunc()
