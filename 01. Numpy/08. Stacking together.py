@@ -64,3 +64,14 @@ array([1, 2, 3, 0, 4])
 # concatenate : Join a sequence of arrays along an existing axis.
 # hsplit : Split array along second axis.
 # block : Assemble arrays from blocks.
+
+>>> a = np.array((1,2,3))
+>>> b = np.array((2,3,4))
+>>> np.hstack((a,b))
+array([1, 2, 3, 2, 3, 4])
+>>> a = np.array([[1],[2],[3]])
+>>> b = np.array([[2],[3],[4]])
+>>> np.hstack((a,b))
+array([[1, 2],
+       [2, 3],
+       [3, 4]])
