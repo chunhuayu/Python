@@ -13,7 +13,9 @@
 >>> # Plot a normalized histogram with 50 bins
 >>> plt.hist(v, bins=50, density=1)       # matplotlib version (plot)
 >>> plt.show()
-../_images/quickstart-2_00_00.png
+
+
+
 >>>
 >>> # Compute the histogram with numpy and then plot it
 >>> (n, bins) = np.histogram(v, bins=50, density=True)  # NumPy version (no plot)
