@@ -69,7 +69,6 @@ array([10, 15, 20, 25])
 array([ 0. ,  0.3,  0.6,  0.9,  1.2,  1.5,  1.8])
 
 
-
 # When arange is used with floating point arguments, it is generally not possible to predict the number of elements obtained, 
 # due to the finite floating point precision. For this reason, it is usually better to use the function linspace that receives 
 # as an argument the number of elements that we want, instead of the step:
@@ -80,7 +79,59 @@ array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ,  1.25,  1.5 ,  1.75,  2.  ])
 >>> x = np.linspace( 0, 2*pi, 100 )        # useful to evaluate function at lots of points
 >>> f = np.sin(x)
 
+# numpy.array
+>>>
+>>> np.array([1, 2, 3])
+array([1, 2, 3])
 
-# See also
-# array, zeros, zeros_like, ones, ones_like, empty, empty_like, arange, linspace, numpy.random.rand, numpy.random.randn, 
-# fromfunction, fromfile
+
+# Upcasting:
+>>>
+>>> np.array([1, 2, 3.0])
+array([ 1.,  2.,  3.])
+
+# More than one dimension:
+>>>
+>>> np.array([[1, 2], [3, 4]])
+array([[1, 2],
+       [3, 4]])
+
+# Minimum dimensions 2:
+>>>
+>>> np.array([1, 2, 3], ndmin=2)
+array([[1, 2, 3]])
+
+# Type provided:
+>>>
+>>> np.array([1, 2, 3], dtype=complex)
+array([ 1.+0.j,  2.+0.j,  3.+0.j])
+
+
+# Data-type consisting of more than one element:
+>>>
+>>> x = np.array([(1,2),(3,4)],dtype=[('a','<i4'),('b','<i4')])
+>>> x['a']
+array([1, 3])
+
+# Creating an array from sub-classes:
+>>>
+>>> np.array(np.mat('1 2; 3 4'))
+array([[1, 2],
+       [3, 4]])
+>>>
+>>> np.array(np.mat('1 2; 3 4'), subok=True)
+matrix([[1, 2],
+        [3, 4]])
+
+
+# empty_like : Return an empty array with shape and type of input.
+# ones_like : Return an array of ones with shape and type of input.
+# zeros_like : Return an array of zeros with shape and type of input.
+# full_like : Return a new array with shape of input filled with value.
+# empty : Return a new uninitialized array.
+# ones : Return a new array setting values to one.
+# zeros : Return a new array setting values to zero.
+# full : Return a new array of given shape filled with value.
+
+
+# See also : linspace, numpy.random.rand, numpy.random.randn, fromfunction, fromfile
